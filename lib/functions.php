@@ -292,7 +292,8 @@ function follow_tags_get_all_tags($limit) {
 	$options = array(
 		'limit' => $limit,
 		'threshold' => $threshold,
-        'tag_name' => 'tags',
+        	'tag_name' => 'tags',
+        	'owner_guids' => elgg_get_logged_in_user_guid()
 		);
 		
 	$tags = elgg_get_tags($options);
